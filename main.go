@@ -81,6 +81,7 @@ func main() {
 	r.HandleFunc("/movies", createMovie).Methods("POST")
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
+	r.HandleFunc("/weather", getWeather).Methods("POST")
 
 	fmt.Printf("starting server at port 8081")
 
